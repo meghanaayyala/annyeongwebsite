@@ -10,11 +10,18 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+
   <title>Annyeong</title>
 
   <style>
     nav{
-      background-color: white;
+      background-color: rgb(239, 196, 252);
     }
     .one-edge-shadow {
               box-shadow: 0 8px 2px -5px rgb(246, 245, 245);
@@ -43,7 +50,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/store">Store <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/store">Home<span class="sr-only">(current)</span></a>
         </li>
 
       </ul>
@@ -58,18 +65,18 @@
         {% if request.session.customer %}
         
         <li class="nav-item ">
-          <a class="nav-link" href="/orders">Orders<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/orders" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">Orders<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="/logout">Logout<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/logout" style="font-weight: bold;">Logout<span class="sr-only">(current)</span></a>
         </li>
         {% else %}
        
         <li class="nav-item ">
-          <a class="nav-link" href="/signup">Signup<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/signup" style="font-weight: bold;">Signup<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/login" style="font-weight: bold;">Login<span class="sr-only">(current)</span></a>
         </li>
         {% endif %}
 
