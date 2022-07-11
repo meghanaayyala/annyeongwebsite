@@ -29,8 +29,18 @@
 				{% for product in products %}
 				<div class="card mx-auto mb-3" id={{product.id}} style="width: 18rem;">
 					<img class="card-img-top" src="{{product.image.url}}" alt="Card image cap">
+					<!--Zoom over hover effect-->
+					<style>
+						.card-img-top{
+							transition: transform .2s;
+						}
+						.card-img-top:hover {
+						  transform: scale(1.10); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+						}
+						</style>
 					<div class="card-body">
 						<p class="card-title" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">{{product.name}}</p>
+						<p class="card-text" style="font-family: 'Poppins', sans-serif; font-weight: 200;"><b>{{product.description}}</b></p>
 						<p class="card-text" style="font-family: 'Poppins', sans-serif; font-weight: bold; "><b>{{product.price|currency}}</b></p>
 						<!-- {{product | is_in_cart:request.session.cart }} -->
 					</div>
@@ -57,7 +67,7 @@
 							{% csrf_token %}
 							<input hidden type="text" name='product' value='{{product.id}}'>
 							<input type="submit" class="float-right btn btn-light  form-control" style="font-weight: bold;font-family: 'Poppins', sans-serif; "
-								value="Add To Cart">
+								value="Add To Cart"><i class='fa fa-shopping-cart'></i>
 						</form>
 						{% endif %}
 
