@@ -41,7 +41,7 @@
   sticky-top navbar 
   navbar-expand-lg
    navbar-light bg-white">
-    <a class="navbar-brand" href="/">Annyeong</a>
+    <a class="navbar-brand" href="/" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">Annyeong</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/store">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/store" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">Home<span class="sr-only">(current)</span></a>
         </li>
 
       </ul>
@@ -58,7 +58,7 @@
 
       <ul class=" navbar-nav my-2 my-lg-0">
         <li class="nav-item ">
-          <a class="nav-link" href="/cart">Cart 
+          <a class="nav-link" href="/cart" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">Cart 
             <span class="badge badge-info">{{request.session.cart.keys|length}}</span>
             <span class="sr-only">(current)</span></a>
         </li>
@@ -68,15 +68,15 @@
           <a class="nav-link" href="/orders" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">Orders<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="/logout" style="font-weight: bold;">Logout<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/logout" style="font-weight: bold; font-family: 'Poppins', sans-serif;">Logout<span class="sr-only">(current)</span></a>
         </li>
         {% else %}
        
         <li class="nav-item ">
-          <a class="nav-link" href="/signup" style="font-weight: bold;">Signup<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/signup" style="font-weight: bold; font-family: 'Poppins', sans-serif;">Signup<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="/login" style="font-weight: bold;">Login<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/login" style="font-weight: bold; font-family: 'Poppins', sans-serif;">Login<span class="sr-only">(current)</span></a>
         </li>
         {% endif %}
 
