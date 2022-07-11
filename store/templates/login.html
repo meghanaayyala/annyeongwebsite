@@ -15,7 +15,7 @@
             <div class="display-8">Login</div>
             <hr>
             </div>
-            <h3 hidden class="alert alert-light border mt-4 mb-4 rounded">Login Here</h3>
+            <h3 hidden class="alert alert-light border mt-4 mb-4 rounded" style="font-weight: bold;font-family: 'Poppins', sans-serif;">Login Here</h3>
             <form action="/login" method="POST">
                 
                 {% csrf_token %}
@@ -27,7 +27,7 @@
                 {% endif %}
                 <!-- email -->
                 <div class="form-group">
-                    <label for="">Email</label>
+                    <label for="" style="font-weight: bold;font-family: 'Poppins', sans-serif;">Email</label>
                     <input required type="email" name="email" id=""
                     value="{{values.email}}" 
                     class=" form-control-sm form-control" placeholder="example@gmail.com">
@@ -36,7 +36,7 @@
 
                 <!-- password -->
                 <div class="form-group">
-                    <label for="">Password</label>
+                    <label for="" style="font-weight: bold;font-family: 'Poppins', sans-serif;">Password</label>
                     <input type="password" 
                     name="password" 
                     id=""
@@ -44,8 +44,8 @@
                 </div>
 
                 <hr>
-                <div class="form-group">
-                    <input class="btn btn-sm btn-info col-lg-4" type="submit" value="Login">
+                <div class="form-group" style="font-weight: bold;font-family: 'Poppins', sans-serif;">
+                    <input class="btn btn-sm btn-info col-lg-4" type="submit" value="Login" style="font-weight: bold;font-family: 'Poppins', sans-serif;">
                 </div>
 
                 

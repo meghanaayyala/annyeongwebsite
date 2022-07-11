@@ -14,11 +14,11 @@
 		<div class="col-lg-3 mx-auto">
 			<div class="list-group">
 
-				<a href="/" class="list-group-item list-group-item-action">All Products</a>
+				<a href="/" class="list-group-item list-group-item-action" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">All Products</a>
 
 				{% for category in categories %}
 				<a href="/?category={{category.id}}"
-					class="list-group-item list-group-item-action">{{category.name}}</a>
+					class="list-group-item list-group-item-action" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">{{category.name}}</a>
 				{% endfor %}
 			</div>
 		</div>
@@ -30,8 +30,8 @@
 				<div class="card mx-auto mb-3" id={{product.id}} style="width: 18rem;">
 					<img class="card-img-top" src="{{product.image.url}}" alt="Card image cap">
 					<div class="card-body">
-						<p class="card-title">{{product.name}}</p>
-						<p class="card-text"><b>{{product.price|currency}}</b></p>
+						<p class="card-title" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">{{product.name}}</p>
+						<p class="card-text" style="font-family: 'Poppins', sans-serif; font-weight: bold; "><b>{{product.price|currency}}</b></p>
 						<!-- {{product | is_in_cart:request.session.cart }} -->
 					</div>
 
@@ -43,20 +43,20 @@
 								{% csrf_token %}
 								<input hidden type="text" name='product' value='{{product.id}}'>
 								<input hidden type="text" name='remove' value='True'>
-								<input type="submit" value=" - " class="btn btn-block btn-light border-right">
+								<input type="submit" value=" - " class="btn btn-block btn-light border-right" style="font-weight: bold;font-family: 'Poppins', sans-serif; background-color: rgb(253, 85, 85);">
 							</form>
-							<div class="text-center col">{{product|cart_quantity:request.session.cart}} in Cart</div>
+							<div class="text-center col" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">{{product|cart_quantity:request.session.cart}} in Cart</div>
 							<form action="/#{{product.id}}" class="col-2 " method="post">
 								{% csrf_token %}
 								<input hidden type="text" name='product' value='{{product.id}}'>
-								<input type="submit" value=" + " class="btn btn-block btn-light border-left">
+								<input type="submit" value=" + " class="btn btn-block btn-light border-left" style="font-weight: bold;font-family: 'Poppins', sans-serif; background-color: rgb(47, 255, 82);">
 							</form>
 						</div>
 						{% else %}
 						<form action="/#{{product.id}}" method="POST" class="btn-block">
 							{% csrf_token %}
 							<input hidden type="text" name='product' value='{{product.id}}'>
-							<input type="submit" class="float-right btn btn-light  form-control"
+							<input type="submit" class="float-right btn btn-light  form-control" style="font-weight: bold;font-family: 'Poppins', sans-serif; "
 								value="Add To Cart">
 						</form>
 						{% endif %}
