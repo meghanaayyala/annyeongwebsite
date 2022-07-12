@@ -1,4 +1,3 @@
-# annyeongwebsite
 
 # Project Overview
 Annyeong is an e-commerce webiste for K-Pop photo cards business.This website aims to provide a platform for all its users to process orders, make payments, track their orders, and help them with customer service. 
@@ -16,5 +15,6 @@ Annyeong is an e-commerce webiste for K-Pop photo cards business.This website ai
 # Project Set Up
 Clone the repository and set up a local environment in your device.
 '''
-https://github.com/meghanaayyala/annyeongwebsite.git
+git clone https://github.com/meghanaayyala/annyeongwebsite.git
+
 '''
