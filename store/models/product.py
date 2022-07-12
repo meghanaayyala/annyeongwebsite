@@ -9,6 +9,8 @@ class Product(models.Model):
     description = models.CharField(max_length=200, default='' , null=True , blank=True)
     # added rating
     rating=models.CharField(max_length=5,default='',null=True,blank=True)
+    # added bestsellerstatus
+    bestsellerstatus=models.CharField(max_length=50,default='',null=True,blank=True)
     image = models.ImageField(upload_to='uploads/products/')
 
     @staticmethod
