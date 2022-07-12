@@ -13,8 +13,8 @@ Annyeong is an e-commerce webiste for K-Pop photo cards business.This website ai
 - Product reviews and best sellers for each category
 
 # Project Set Up
-Clone the repository and set up a local environment in your device.
-'''
+Clone the repository and set up a local environment on your device:
+```
 git clone https://github.com/meghanaayyala/annyeongwebsite.git
 
-'''
+```
