@@ -27,7 +27,7 @@ pip install -r requirements.txt    # installs dependencies and requirements
 - Product reviews and best sellers for each category
 
 ## Home Page 
-<img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1062).png">
+<img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1061).png">
 
 <img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1062).png">
 
