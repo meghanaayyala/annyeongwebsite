@@ -28,16 +28,16 @@ pip install -r requirements.txt    # installs dependencies and requirements
 - Discounts on selected products 
 
 ## Home Page 
-<img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1061).png">
+<img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1078).png">
 
 <img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1062).png">
 
 ## Product page
-<img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1063).png">
+<img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1080).png">
 
 ## Login and account creation
 <img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1066).png">
 
 ## Cart and Order status
-<img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1064).png">
+<img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1081).png">
 <img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1065).png">
