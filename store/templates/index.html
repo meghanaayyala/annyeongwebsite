@@ -47,7 +47,11 @@
 					<div class="card-body">
 						<p class="card-title" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">{{product.name}}<br>
 							<span class="badge badge-primary"><!--changehereforcolors-->{{product.category}}</span>&nbsp;
-							<span class="badge badge-warning"><!--changehereforcolors-->{{product.bestsellerstatus}}</span>&nbsp;
+							{% if product.bestsellerstatus %}
+							<span class="badge badge-warning">Best Seller</span>&nbsp;
+							{%else%}
+							<!---->
+							{%endif%}
 						</p> 
 						<p class="card-text" style="font-family: 'Poppins', sans-serif; font-weight: 200;">{{product.description}}<br>
 						<i data-star="{{product.rating}}"></i> <br>

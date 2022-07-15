@@ -10,7 +10,7 @@ class Product(models.Model):
     # added rating
     rating=models.CharField(max_length=5,default='',null=True,blank=True)
     # added bestsellerstatus
-    bestsellerstatus=models.CharField(max_length=50,default='',null=True,blank=True)
+    bestsellerstatus=models.BooleanField(default=False)
     image = models.ImageField(upload_to='uploads/products/')
 
     #adding discount
