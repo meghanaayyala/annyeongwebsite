@@ -22,8 +22,12 @@ def cart_quantity(product  , cart):
 
 @register.filter(name='price_total')
 def price_total(product  , cart):
-    if(product.discountstatus):
+    if(product.discount50):
         return product.price*0.5*cart_quantity(product , cart)
+    elif(product.discount30):
+        return product.price*0.7*cart_quantity(product , cart)
+    elif(product.discount10):
+        return product.price*0.9*cart_quantity(product , cart)
     else:
         return product.price*cart_quantity(product , cart)
 
@@ -36,8 +40,14 @@ def total_cart_price(products , cart):
 
     return sum
 
-@register.filter(name='discount_price')
+@register.filter(name='discount50_price')
 def discount_price(product,cart):
     return product.price*0.5
+@register.filter(name='discount30_price')
+def discount_price(product,cart):
+    return product.price*0.7
+@register.filter(name='discount10_price')
+def discount_price(product,cart):
+    return product.price*0.9
 
     

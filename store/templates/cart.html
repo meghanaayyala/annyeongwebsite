@@ -27,8 +27,12 @@
                     <td><img style="height: 80px;" class="rounded-circle" src="{{product.image.url}}" alt=""></td>
                     <td>{{product.name}}</td>
                     <td>{{product.price|currency}}&nbsp;
-                      {% if product.discountstatus %}
+                      {% if product.discount50 %}
                       <span class="badge badge-success">50% OFF</span>
+                      {% elif product.discount30 %}
+                      <span class="badge badge-success">30% OFF</span>
+                      {% elif product.discount10 %}
+                      <span class="badge badge-success">10% OFF</span>
                       {%else%}
                       <!---->
                       {% endif %}

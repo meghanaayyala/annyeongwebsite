@@ -136,11 +136,11 @@
 							[data-star^="5"]::after{width:100%}
 						</style>
 						</p>
-						{% if product.discountstatus %}
+						{% if product.discount50 %}
 						<p class="card-title" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">
 						<span class="original-price" aria-label="Original Price">{{product.price|currency}}</span>
 						&nbsp;&nbsp;
-						<span aria-label="Sale Price">{{product|discount_price:request.session.cart|currency}}</span>
+						<span aria-label="Sale Price">{{product|discount50_price:request.session.cart|currency}}</span>
 						<span class="badge badge-success">50% OFF</span>
 						<style>
 							.original-price {
@@ -158,6 +158,50 @@
 								}
 						</style>
 						</p>
+						{% elif product.discount30 %} 
+						<p class="card-title" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">
+							<span class="original-price" aria-label="Original Price">{{product.price|currency}}</span>
+							&nbsp;&nbsp;
+							<span aria-label="Sale Price">{{product|discount30_price:request.session.cart|currency}}</span>
+							<span class="badge badge-success">30% OFF</span>
+							<style>
+								.original-price {
+									position: relative;
+									color: #555;
+									}
+									.original-price::after {
+									content: "";
+									position: absolute;
+									top: 50%;
+									left: 0;
+									right: 0;
+									border-top: 3px solid red;
+									transform: rotate(-30deg);
+									}
+							</style>
+							</p>
+							{% elif product.discount10 %} 
+							<p class="card-title" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">
+								<span class="original-price" aria-label="Original Price">{{product.price|currency}}</span>
+								&nbsp;&nbsp;
+								<span aria-label="Sale Price">{{product|discount10_price:request.session.cart|currency}}</span>
+								<span class="badge badge-success">10% OFF</span>
+								<style>
+									.original-price {
+										position: relative;
+										color: #555;
+										}
+										.original-price::after {
+										content: "";
+										position: absolute;
+										top: 50%;
+										left: 0;
+										right: 0;
+										border-top: 3px solid red;
+										transform: rotate(-30deg);
+										}
+								</style>
+								</p>
 						{%else%}
 						<p class="card-title" style="font-weight: bold;font-family: 'Poppins', sans-serif; ">
 						<b>{{product.price|currency}}</b>

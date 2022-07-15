@@ -14,7 +14,10 @@ class Product(models.Model):
     image = models.ImageField(upload_to='uploads/products/')
 
     #adding discount
-    discountstatus=models.BooleanField(default=False)
+   # discountstatus=models.BooleanField(default=False)
+    discount50=models.BooleanField(default=False)
+    discount30=models.BooleanField(default=False)
+    discount10=models.BooleanField(default=False)
     @staticmethod
     def get_products_by_id(ids):
         return Product.objects.filter(id__in =ids)
