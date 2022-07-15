@@ -25,6 +25,7 @@ pip install -r requirements.txt    # installs dependencies and requirements
 - Track order status and cart status
 - Secure payments and transactions
 - Product reviews and best sellers for each category
+- Discounts on selected products 
 
 ## Home Page 
 <img width=700 src="https://github.com/meghanaayyala/annyeongwebsite/blob/main/uploads/products/Screenshot%20(1061).png">
