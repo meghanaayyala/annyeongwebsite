@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password
 from store.models.customer import Customer
 from django.views import View
-
+import re
 
 class Signup(View):
     def get(self, request):
@@ -45,6 +45,12 @@ class Signup(View):
 
     def validateCustomer(self, customer):
         error_message = None;
+        regex = ("^(?=.*[a-z])(?=." +"*[A-Z])(?=.*\\d)" + "(?=.*[-+_!@#$%^&*., ?]).+$")
+        p=re.compile(regex)
+        match=re.search(p,customer.password)
+        regexemail = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+        emailmatch=re.fullmatch(regexemail,customer.email)
+        #res=re.search(p,customer.password)
         if (not customer.first_name):
             error_message = "First Name Required !!"
         elif len(customer.first_name) < 4:
@@ -57,10 +63,15 @@ class Signup(View):
             error_message = 'Phone Number required'
         elif len(customer.phone) < 10:
             error_message = 'Phone Number must be 10 char Long'
-        elif len(customer.password) < 6:
-            error_message = 'Password must be 6 char long'
-        elif len(customer.email) < 5:
-            error_message = 'Email must be 5 char long'
+        
+        #elif len(customer.password) < 6:
+            #error_message = 'Password must be 6 char long'
+        elif match is None:
+            error_message='Password must contain an upper case letter, lower case letter and a special character'
+        # len(customer.email) < 5:
+            #error_message = 'Email must be 5 char long'
+        elif emailmatch is None:
+            error_message='Invalid email'
         elif customer.isExists():
             error_message = 'Email Address Already Registered..'
         # saving
